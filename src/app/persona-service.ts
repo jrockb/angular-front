@@ -18,6 +18,10 @@ export class PersonaService {
     this.personas = personas;
   }
 
+  obtenerPersonas() {
+    return this.dataService.cargarPersonas();
+  }
+
   agregarPersona(persona: Persona) {
     console.log('Persona a agregar: ' + persona.nombre );
     this.dataService.agregarPersonas(persona).subscribe(
@@ -42,7 +46,7 @@ export class PersonaService {
     console.log('eliminar persona con id: ' + id);
     // se necesita eliminar el objeto persona del arreglo y del objeto recibido
     const index = this.personas.findIndex(persona => persona.idPersona == id);
-    this.personas.splice(index,1);
+    this.personas.splice(index, 1);
     this.dataService.eliminarPersona(id);
   }
 

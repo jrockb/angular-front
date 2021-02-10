@@ -8,7 +8,7 @@ import { Persona } from './persona.model';
 export class DataService {
   constructor(private httpClient: HttpClient) {}
 
-  urlBase = 'http://localhost:8080/persona-backend-java/webservice'; // url del servicio expuesto por Java
+  urlBase = 'http://localhost:8080/persona-backend-java/webservice/personas/'; // url del servicio expuesto por Java
 
   // metodo que hará una llamada GET al ws para traer el listado de personas
   cargarPersonas() {
