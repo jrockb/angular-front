@@ -34,4 +34,9 @@ export class PersonasComponent implements OnInit {
       });
   }
 
+  irAgregar() {
+    console.log('ir a agregar persona');
+    this.router.navigate(['./personas/agregar']);
+  }
+
 }

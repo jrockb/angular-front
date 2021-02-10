@@ -1,0 +1,7 @@
+<!-- el idPersona no es necesario proporcionarlo porque se generará de forma auotmática -->
+<div class="box"> <!-- para desplegar la caja-->
+  <form class="item" #f="ngForm" (ngSubmit)="f.form.valid && onGuardarPersona()">
+    <input type="text" name="nombre" placeholder="nombre" [(ngModel)]="nombreInput" required/>
+    <button type="submit" style="cursor: pointer;">+</button>
+  </form>
+</div>
