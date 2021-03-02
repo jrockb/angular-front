@@ -33,7 +33,7 @@ export class DataService {
 
   eliminarPersona(idPersona: number) {
     let url: string;
-    url = this.urlBase + '/' + idPersona;
+    url = this.urlBase + idPersona;
     this.httpClient.delete(url)
     .subscribe((response) => {
       console.log('resultado eliminar persona: ' + response);

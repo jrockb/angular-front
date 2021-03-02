@@ -41,4 +41,12 @@ export class FormularioComponent implements OnInit {
     this.router.navigate(['personas']); // Despues de guardar se navega al listado de personas
   }
 
+  onEliminarPersona(){
+    if (this.idPersona != null){
+      console.log('persona a eliminar: ' + this.idPersona);
+      this.personaService.eliminarPersona(this.idPersona);
+    }
+    this.router.navigate(['personas']);
+  }
+
 }
