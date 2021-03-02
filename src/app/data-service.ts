@@ -21,7 +21,7 @@ export class DataService {
 
   modificarPersona(idPersona: number, persona: Persona) {
     let url: string;
-    url = this.urlBase + '/' + idPersona;
+    url = this.urlBase + idPersona;
     this.httpClient.put(url, persona)
     .subscribe((response) => { // necesita suscribirse porque va a recibir un objeto
       console.log('resultado modificar persona: ' + response); // caso exitoso

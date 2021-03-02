@@ -39,6 +39,11 @@ export class PersonaService {
 
   modificarPersona(id: number, persona: Persona){
     console.log('persona a modificar: ' + persona.idPersona);
+    // se actualiza el objeto de persona del arreglo
+    const personaModificadaLocal = this.personas.find( persona => persona.idPersona == id);
+    personaModificadaLocal.idPersona = persona.idPersona;
+    personaModificadaLocal.nombre = persona.nombre;
+    // guardar el arreglo de la persona en la base de datos
     this.dataService.modificarPersona(id, persona);
   }
 
